@@ -17,13 +17,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Crell\\Foo\\": "src"
+            "Crell\\Moshi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Crell\\Foo\\": "tests",
-            "Crell\\Foo\\Benchmarks\\": "benchmarks"
+            "Crell\\Moshi\\": "tests",
+            "Crell\\Moshi\\Benchmarks\\": "benchmarks"
         }
     }
 }
