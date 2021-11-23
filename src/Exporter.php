@@ -8,6 +8,7 @@ use Crell\Moshi\Schema\Schema;
 use Laminas\Code\Generator\ClassGenerator;
 use Laminas\Code\Generator\DocBlockGenerator;
 use Laminas\Code\Generator\FileGenerator;
+use Laminas\Code\Generator\PropertyGenerator;
 
 class Exporter
 {
@@ -44,6 +45,17 @@ class Exporter
 
         $gDocblock->setLongDescription($description);
         $gClass->setDocBlock($gDocblock);
+
+        foreach ($schema->properties as $name => $property) {
+            $gProperty = new PropertyGenerator($name);
+            $gProperty->setVisibility(PropertyGenerator::VISIBILITY_PUBLIC);
+            if ($property->description) {
+                $gDocblock = new DocBlockGenerator($property->description);
+                $gProperty->setDocBlock($gDocblock);
+            }
+            $gClass->addPropertyFromGenerator($gProperty);
+        };
+
 
         $gFile = new FileGenerator();
         $gFile->setClass($gClass);

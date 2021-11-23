@@ -18,8 +18,10 @@ class Schema implements Property
         public readonly ?string $id = null,
         public readonly ?string $title = null,
         public readonly ?string $description = null,
+        /** Property[] */
         #[DictionaryField(arrayType: Property::class)]
         public readonly array $properties = [],
+        /** string[] */
         #[SequenceField]
         public readonly array $required = [],
     ) {}

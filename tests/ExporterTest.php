@@ -68,5 +68,6 @@ class ExporterTest extends TestCase
         $classname = $namespace . '\\Product';
         $p = new $classname();
 
+
     }
 }
