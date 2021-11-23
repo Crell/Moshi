@@ -7,6 +7,8 @@
 
 Moshi is a still-experimental JSON Schema generation tool for PHP.  Given a JSON Schema file, it allows you to generate PHP classes that correspond to the data described by the schema.  Those classes may then be populated directly and exported, or serialized/deserialized using the [Crell/Serde](https://www.github.com/Crell/Serde) library.
 
+"Moshi" is Chinese for "Schema."
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
