@@ -7,7 +7,10 @@ namespace Crell\Moshi;
 use Crell\Moshi\Schema\Schema;
 use PHPUnit\Framework\TestCase;
 
-
+// This breaks currently if there's more than one test, because
+// code generation tests need to run in separate processes.
+// The usual @runTestsInSeparateProcesses attribute, however,
+// is causing PHPUnit to silently hang.  Unclear why.
 class ExporterTest extends TestCase
 {
     use TestUtils;
