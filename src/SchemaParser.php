@@ -8,7 +8,7 @@ use Crell\Moshi\Schema\Schema;
 use Crell\Serde\Serde;
 use Crell\Serde\SerdeCommon;
 
-class Moshi
+class SchemaParser
 {
     public function __construct(
         protected Serde $serde = new SerdeCommon(),

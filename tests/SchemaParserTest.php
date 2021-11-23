@@ -9,23 +9,18 @@ use Crell\Moshi\Schema\IntegerProperty;
 use Crell\Moshi\Schema\NumberProperty;
 use Crell\Moshi\Schema\Schema;
 use Crell\Moshi\Schema\StringProperty;
-use Crell\Moshi\Schema\Type;
 use PHPUnit\Framework\TestCase;
 
-class MoshiTest extends TestCase
+class SchemaParserTest extends TestCase
 {
-
-    protected function loadFile(string $name): string
-    {
-        return file_get_contents(__DIR__ . '/' . $name);
-    }
+    use TestUtils;
 
     /**
      * @test
      */
     public function stuff(): void
     {
-        $m = new Moshi();
+        $m = new SchemaParser();
 
         $schema = $m->parse($this->loadFile('schemas/getting-started/product.json'));
 

@@ -23,4 +23,9 @@ class Schema implements Property
         #[SequenceField]
         public readonly array $required = [],
     ) {}
+
+    public function isRequired(string $field): bool
+    {
+        return in_array($field, $this->required, true);
+    }
 }
