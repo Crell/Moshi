@@ -1,13 +1,22 @@
 {
-    "name": "crell/*",
+    "name": "crell/moshi",
     "repositories": [
         {
             "type": "git",
             "url": "https://github.com/Crell/fp.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/Crell/AttributeUtils.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/Crell/Serde.git"
         }
     ],
     "require": {
-        "php": "~8.0"
+        "php": "~8.0",
+        "crell/serde": "^0.2.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
